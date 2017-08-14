@@ -12,3 +12,12 @@ void attoid(char *id)
     id[i] = url[id[i] & 63];
   }
 }
+
+void attoid_csize(char *id, int size)
+{
+  int i;
+  randombytes_buf(id, size);
+  for (i = 0; i < size; i++) {
+    id[i] = url[id[i] & 63];
+  }
+}
